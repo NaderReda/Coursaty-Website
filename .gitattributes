@@ -10,8 +10,13 @@
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
 
-# force files with blade extension to be recognized as PHP
+# treat Blade templates as PHP so Linguist counts them correctly
 *.blade.php linguist-language=PHP
 
-# أو، لو فيه ملفات ما تبي تُحسب (مثلاً ملفات front‑end منفصلة):
-path/to/some/dir/* linguist-vendored
+# mark frontend assets as vendored to keep language stats focused on PHP
+resources/js/* linguist-vendored
+resources/css/* linguist-vendored
+public/js/* linguist-vendored
+public/css/* linguist-vendored
+public/admin/* linguist-vendored
+node_modules/* linguist-vendored
