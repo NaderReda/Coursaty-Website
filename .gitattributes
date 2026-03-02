@@ -9,3 +9,9 @@
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
+
+# force files with blade extension to be recognized as PHP
+*.blade.php linguist-language=PHP
+
+# أو، لو فيه ملفات ما تبي تُحسب (مثلاً ملفات front‑end منفصلة):
+path/to/some/dir/* linguist-vendored
